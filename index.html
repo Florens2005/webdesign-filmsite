@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="grid.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Theater</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>  
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="films.html">Films</a>
+        <a href="about.html">About</a>  
+      </div>
+    <div class="parent">
+      
+          <div class="header">
+            <div class="indexheader">
+            
+                <div class="header-image">
+                    <img src="https://cdn.europosters.eu/image/hp/50758.jpg" alt="Afbeelding 1">
+                    <h1>Welkom op de home pagina van Movie Theater</h1>
+                  </div>
+                  <div class="header-image">
+                    <img src="https://i.ebayimg.com/images/g/c8QAAOSwx1Rdihvb/s-l1600.jpg" alt="Afbeelding 2">
+                  </div>
+                  <div class="header-image">
+                    <img src="https://www.fanthatracks.com/wp-content/uploads/2021/05/hunter-wrecker-crosshair_TBB_poster_1.jpg" alt="Afbeelding 3">
+                  </div>
+          </div>
+          </div>
+          <script>
+           
+            let currentImage = 0;
+            const images = document.querySelectorAll('.header-image');
+          
+            function showNextImage() {
+              images[currentImage].style.display = 'none';
+              currentImage = (currentImage + 1) % images.length;
+              images[currentImage].style.display = 'block';
+              setTimeout(showNextImage, 5000); 
+            }
+          
+            showNextImage();
+          </script> 
+
+    <div class="content">
+        <div class="indexcontent"> 
+            <div class="gallery">
+                <a href="ahsoka.html">
+                <img src="https://preview.redd.it/official-star-wars-ahsoka-poster-v0-z043dl101omb1.jpg?width=640&crop=smart&auto=webp&s=661ce4c4d5b3e6f27832d2658fb87f50d6f16821" alt="Ahsoka" class="index-image">
+                <div class="desc">Ahsoka</div>
+                </a>
+            </div>
+            <div class="gallery">
+                <a href="mandalorian.html">
+                <img src="https://images.squarespace-cdn.com/content/v1/5bfdc74875f9ee194f3e0add/1595543330944-YAIO922G9ALDF0JS8C1R/The_Mandalorian_TV_Series-526462730-large.jpg" alt="The Mandolarian" class="index-image">
+                <div class="desc">The Mandolarian</div>
+                </a>
+            </div>
+            <div class="gallery">
+                <img src="https://m.media-amazon.com/images/M/MV5BZjllZjE1MWEtYTJhZC00MWIyLTliMjEtYzM3ODc4YzQ2MjFlXkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_FMjpg_UX1000_.jpg" alt="The book of Boba Fett" class="index-image">
+                <div class="desc">The book of Boba Fett</div>
+            </div>
+        
+            <div class="clearfix"></div> 
+              
+            
+        </div>
+        </div>
+        <div class="footer">
+            <p>© 2023 Movie Theater door Florens Tool</p>
+        </div>
+        </div>
+    
+</body>
+</html>
